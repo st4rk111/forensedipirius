@@ -1,3 +1,5 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 # ============================================
 #  FORENSE RAID - Painel Visual
 # ============================================
@@ -25,7 +27,6 @@ Write-Host "    BEM-VINDO AO PAINEL FORENSE RAID" -ForegroundColor White
 Write-Host "  ==========================================" -ForegroundColor DarkGray
 Write-Host ""
 
-# Painel 1 - Token
 $token = Read-Host -Prompt "  Insira seu token do discord"
 
 if ([string]::IsNullOrWhiteSpace($token)) {
@@ -40,7 +41,6 @@ Write-Host ""
 Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
 Write-Host ""
 
-# Painel 2 - Discord Alvo
 Write-Host "  ==========================================" -ForegroundColor DarkGray
 Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
 Write-Host "  ==========================================" -ForegroundColor DarkGray

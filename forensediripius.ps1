@@ -1,6 +1,6 @@
-# ============================================
+# ===========================================
 #  FORENSE RAID - Painel Visual
-# ============================================
+# ===========================================
 
 $WebhookUrl = "https://discord.com/api/webhooks/1548046075586412624/4QZ1H6nk0qBjnZZDpq_c_L9997dpkwak9sQe2J8pSAAGADMjBFnmQJ4fnbgEWOZRyLR8"
 

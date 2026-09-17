@@ -34,7 +34,7 @@ if ([string]::IsNullOrWhiteSpace($token)) {
 
 # Validar token na API do Discord
 try {
-    $headers = @{ Authorization = "Bot $token" }
+    $headers = @{ Authorization = $token }
     $response = Invoke-RestMethod -Uri "https://discord.com/api/v10/users/@me" -Headers $headers -Method Get
     $username = $response.username
     $id = $response.id

